@@ -6,6 +6,7 @@ def parse_requirements(filename, session=None):
     return [line for line in lineiter if line and not line.startswith("#")]
 
 with codecs.open("README.md", "r", 'cp932', 'ignore') as fh:
+    fh.replace("0x99","")
     long_description = fh.read()
 
 setuptools.setup(
