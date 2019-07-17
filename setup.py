@@ -1,10 +1,11 @@
 import setuptools
+import codecs
 def parse_requirements(filename, session=None):
     """ load requirements from a pip requirements file """
     lineiter = (line.strip() for line in open(filename))
     return [line for line in lineiter if line and not line.startswith("#")]
 
-with open("README.md", "r",encoding="utf-8_sig") as fh:
+with codecs.open("README.md", "r", 'cp932', 'ignore') as fh:
     long_description = fh.read()
 
 setuptools.setup(
