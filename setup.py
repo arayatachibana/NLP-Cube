@@ -5,9 +5,9 @@ def parse_requirements(filename, session=None):
     lineiter = (line.strip() for line in open(filename))
     return [line for line in lineiter if line and not line.startswith("#")]
 
-with open("README.md", "r") as fh:
-    fh.replace("0x99","")
-    long_description = fh.read()
+with open("README.md", "r") as foo:
+    foo.replace("0x99","")
+    long_description = foo.read()
 
 setuptools.setup(
     name="nlpcube",
