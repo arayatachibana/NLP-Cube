@@ -4,7 +4,7 @@ def parse_requirements(filename, session=None):
     lineiter = (line.strip() for line in open(filename))
     return [line for line in lineiter if line and not line.startswith("#")]
 
-with open("README.md", "r") as fh:
+with open("README.md", "r",encoding="utf-8_sig") as fh:
     long_description = fh.read()
 
 setuptools.setup(
